@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Century Winter Cup | Live Leaderboard</title><style>
+:root{--bg:#f6f7fc;--panel:#ffffffed;--line:#e5e7f1;--text:#18233b;--muted:#66728a;--pink:#e6007e;--cyan:#7c4dcb;--gold:#e6007e}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 10%,#f4e5fa 0,transparent 35%),radial-gradient(circle at 8% 75%,#e7f0ff 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,'Segoe UI',Arial,sans-serif;min-height:100vh}#snow{position:fixed;inset:0;pointer-events:none;z-index:0}.glow{position:fixed;width:48vw;height:48vw;filter:blur(85px);border-radius:50%;opacity:.16;pointer-events:none;z-index:0}.g1{top:-24vw;left:-15vw;background:#a58de8}.g2{right:-20vw;bottom:-25vw;background:#e6007e}.wrap{max-width:1440px;margin:auto;padding:28px 24px 80px;position:relative;z-index:1}header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px}.brand{display:flex;gap:15px;align-items:center}.logo{width:62px;height:62px;border-radius:18px;background:linear-gradient(135deg,#ff3b9d,#7d4cfa);display:grid;place-items:center;font-size:29px;box-shadow:0 12px 35px #ff4eab44}h1{font-size:clamp(24px,3.5vw,40px);margin:0;letter-spacing:-1.3px}.sub{color:var(--muted);margin:6px 0 0;font-size:13px}.eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);font-weight:800}.pill,.btn,select,input{font:inherit}.pill,.btn{border:1px solid var(--line);border-radius:999px;padding:10px 17px;background:#fff;color:var(--text);cursor:pointer;font-weight:700;font-size:13px;transition:.2s}.pill:hover,.btn:hover{border-color:var(--cyan);transform:translateY(-1px)}.pill.active{background:linear-gradient(120deg,#e6007e,#8651bd);color:#fff;border-color:transparent}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 12px 40px #0002;backdrop-filter:blur(16px)}.hero{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:18px}.hero-main{background:linear-gradient(115deg,#25345c,#453069);position:relative;overflow:hidden}.hero-main:after{content:'❄';position:absolute;right:30px;top:0;font-size:170px;color:#ffffff0d;pointer-events:none}.hero h2{font-size:clamp(24px,3vw,38px);margin:10px 0}.hero p{color:#e9e6f6;line-height:1.6;max-width:680px}.hero-aside{display:flex;flex-direction:column;justify-content:center;gap:12px}.hero-aside strong{font-size:28px;color:#e6007e}.section-title{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:25px 0 14px}.section-title h2{margin:0;font-size:20px}.muted{color:var(--muted);font-size:12px}.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;align-items:center}.filter-label{color:var(--muted);font-size:12px;font-weight:800;margin-right:5px}.sep{width:1px;background:var(--line);height:26px;margin:0 7px}.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.kpi .val{font-size:30px;font-weight:850;margin:9px 0 4px}.kpi .label{font-size:12px;color:var(--muted)}.kpi:nth-child(1) .val{color:var(--cyan)}.kpi:nth-child(2) .val{color:var(--gold)}.kpi:nth-child(3) .val{color:#9cf5c4}.kpi:nth-child(4) .val{color:#ff93c8}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.card-title h3{font-size:16px;margin:0}.tag{border-radius:99px;padding:5px 9px;background:#f3eafa;color:#7a409b;font-size:11px;font-weight:800}.entry{display:grid;grid-template-columns:33px minmax(0,1fr) auto;gap:11px;align-items:center;padding:11px 3px;border-top:1px solid #eceaf2}.rank{width:30px;height:30px;display:grid;place-items:center;border-radius:9px;background:#f2e6f7;font-weight:900;font-size:12px}.entry:first-of-type .rank{background:#e6007e;color:#fff}.name{font-weight:700;font-size:13px;overflow-wrap:anywhere}.detail{color:var(--muted);font-size:11px;margin-top:4px}.score{text-align:right;font-weight:850;color:var(--cyan);font-size:15px}.bar{height:4px;background:#eee9f4;border-radius:10px;margin-top:7px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#e6007e,#8b57d0);border-radius:10px}.empty{padding:24px;text-align:center;color:var(--muted)}.tablewrap{overflow:auto;max-height:540px}.tablewrap table{border-collapse:collapse;width:100%;min-width:850px}th,td{padding:12px;text-align:left;border-bottom:1px solid #eceaf2;font-size:12px}th{color:#47556e;position:sticky;top:0;background:#f6f3fa;z-index:2;text-transform:uppercase;letter-spacing:.5px}td.num{text-align:right;font-variant-numeric:tabular-nums}.search{background:#fff;border:1px solid var(--line);color:#18233b;border-radius:12px;padding:11px 14px;min-width:230px;max-width:100%}.notice{background:#f7f0fb;border:1px solid #e7d6f0;border-radius:14px;padding:12px 16px;color:#56366f;font-size:12px;margin-top:14px}.upload{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.upload input{max-width:100%;font-size:12px}.footer{text-align:center;color:#728099;font-size:12px;margin-top:30px}.hide{display:none!important}@media(max-width:850px){.hero,.cards{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.wrap{padding:16px 12px 50px}.panel{padding:16px}.kpis{gap:9px}.kpi .val{font-size:23px}.logo{width:48px;height:48px}.sep{display:none}}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.2;background-image:radial-gradient(#9984c5 1px,transparent 1px);background-size:27px 27px;mask-image:linear-gradient(to bottom,black,transparent 80%)}.hero-main .eyebrow{color:#ffd3ee}.hero-main h2{color:#fff}.hero-aside .eyebrow{color:#9c4dba}.score{color:#a13b9b}.kpi:nth-child(1) .val{color:#8b55b9}.kpi:nth-child(2) .val{color:#e6007e}.kpi:nth-child(3) .val{color:#2666ad}.kpi:nth-child(4) .val{color:#16856b}th[data-sort]{cursor:pointer;user-select:none}th[data-sort]:hover,th[data-sort]:focus{color:#e6007e;outline-offset:2px}.eng-cell{font-weight:800;color:#9c3489}.hero-main:after{color:#ffffff17}.logo{background:linear-gradient(135deg,#e6007e,#794ec1)}.eyebrow{color:#9c4dba}.tag{border:1px solid #e5d5f3}.pill.active{color:white}.panel{box-shadow:0 12px 38px #30224c0c}.entry .detail{color:#6b748b}
+ .question-count{text-align:right;white-space:nowrap;color:#e6007e}.question-count strong{display:block;font-size:17px;font-weight:900;font-variant-numeric:tabular-nums}.question-count small{display:block;color:#66728a;font-size:10px;font-weight:500;margin-top:3px} .student-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 16px}.student-controls .search{flex:1;min-width:210px}.pager{display:flex;gap:9px;align-items:center;margin-left:auto}.pager button:disabled{opacity:.4;cursor:not-allowed}#studentRows td{vertical-align:middle}#studentRows td:last-child{font-weight:900;color:#e6007e;font-size:14px}.category-breakdown{display:flex;gap:10px;flex-wrap:wrap;margin-top:7px}.category-breakdown span{font-size:12px;color:#66728a;background:#f6f3fb;border-radius:7px;padding:5px 9px} .student-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 16px}.student-controls .search{flex:1;min-width:210px}.pager{display:flex;gap:9px;align-items:center;margin-left:auto}.pager button:disabled{opacity:.4;cursor:not-allowed}#studentRows td{vertical-align:middle}#studentRows td:last-child{font-weight:900;color:#e6007e;font-size:14px}.category-breakdown{display:flex;gap:10px;flex-wrap:wrap;margin-top:7px}.category-breakdown span{font-size:12px;color:#66728a;background:#f6f3fb;border-radius:7px;padding:5px 9px} .coverage-inline{margin-top:22px;padding-top:18px;border-top:1px solid #ffffff35;position:relative;z-index:1}.coverage-inline .eyebrow{color:#f9a6d8}.coverage-stats{display:flex;align-items:center;gap:16px 28px;flex-wrap:wrap;margin:12px 0}.coverage-stats span{color:#f2eafa;font-size:14px}.coverage-stats strong{font-size:25px;color:#ff66b6;margin-right:5px}.coverage-caption{font-size:12px;color:#e0d9ef}.kpi:nth-child(3) .val{color:#7b4dcc}.kpi:nth-child(4) .val{color:#e6007e}</style></head><body><canvas id="snow"></canvas><div class="glow g1"></div><div class="glow g2"></div><main class="wrap"><header><div class="brand"><div class="logo">❄</div><div><div class="eyebrow">The City School · CENTURY-inspired</div><h1>Winter Cup <span style="color:#e6007e">2026</span></h1><p class="sub">Regional competition leaderboard · Six categories · One championship</p></div></div><div class="toolbar"><span class="tag" id="dataLabel">Week 4 · Published leaderboard</span></div></header><section class="hero"><div class="panel hero-main"><div class="eyebrow">🏆 Championship standings</div><h2>Every answer counts.<br/>Every school shines.</h2><p>Explore the leading schools and students across Central, South and North regions. Choose a region or category to see the rankings update instantly.</p><div class="coverage-inline"><div class="eyebrow">Competition coverage</div><div class="coverage-stats"><span><strong>03</strong> Regions</span><span><strong>02</strong> Categories</span><span><strong>05</strong> School leaders + <strong>05</strong> Student leaders</span></div><div class="coverage-caption">Per region and category · Ranked from the source workbook</div></div></div></section><section class="panel" style="margin-bottom:18px"><div style="display:flex;flex-wrap:wrap;gap:15px;align-items:center;justify-content:space-between"><div><strong>Winter Cup · Weekly Standings</strong><p style="font-size:12px;color:#64748b;margin-top:5px">Weeks update automatically when new data is published.</p></div><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><label>Week <select id="weekSelect" style="padding:9px;border:1px solid #ddd;border-radius:8px"></select></label><label>View <select id="viewMode" style="padding:9px;border:1px solid #ddd;border-radius:8px"><option value="cumulative">Cumulative</option><option value="weekly">This week only</option></select></label><span id="weekStatus" style="font-size:12px;color:#a00070">Loading data…</span></div></div></section><div class="filters"><span class="filter-label">REGION</span><button class="pill active" data-region="All">All regions</button><button class="pill" data-region="Central">CR · Central</button><button class="pill" data-region="South">SR · South</button><button class="pill" data-region="North">NR · North</button><span class="sep"></span><span class="filter-label">CATEGORY</span><button class="pill active" data-size="All">Both</button><button class="pill" data-size="Large">Large</button><button class="pill" data-size="Small">Small</button></div><section class="kpis" id="kpis"></section><div class="section-title"><h2>🏫 Top 5 Schools</h2><span class="muted">Ranked by Engagement % · Each region and category</span></div><section class="cards" id="schoolCards"></section><div class="section-title"><h2>🎓 Top 5 Students</h2><span class="muted">Ranked by valid questions answered · Highest first</span></div><section class="cards" id="studentCards"></section><div class="section-title"><h2>📊 Full School Leaderboard</h2><input aria-label="Search schools" class="search" id="search" placeholder="Search schools…"/></div><section class="panel tablewrap"><table><thead><tr><th>School</th><th>Region</th><th>Category</th><th>Total QA</th><th>Active students</th><th aria-label="Sort by engagement" data-sort="eng" role="button" tabindex="0">Engagement <span class="sort-arrow">↕</span></th><th aria-label="Sort by weighted score" data-sort="score" role="button" tabindex="0">Weighted score <span class="sort-arrow">↓</span></th></tr></thead><tbody id="rows"></tbody></table></section><div class="section-title"><h2>🎓 Full Student Leaderboard</h2><span class="muted">Regional and category filters apply · Ranked by questions answered</span></div><div class="student-controls"><input aria-label="Search students" class="search" id="studentSearch" placeholder="Search student or school…"/><span class="muted" id="studentCount"></span><div class="pager"><button class="pill" id="prevStudents">← Previous</button><span class="muted" id="studentPageInfo"></span><button class="pill" id="nextStudents">Next →</button></div></div><section class="panel tablewrap"><table><thead><tr><th>Rank</th><th>Student</th><th>School</th><th>Region</th><th>Category</th><th class="num">Questions answered ↓</th></tr></thead><tbody id="studentRows"></tbody></table></section><footer class="footer">Century Winter Cup · The City School · Built for GitHub Pages</footer></main><script id="embeddedData" type="application/json">{"schools":[],"students":[]}</script><script>
+(()=>{
+'use strict';
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=x=>Math.round(Number(x)||0).toLocaleString('en-US');
+const initial=JSON.parse($('#embeddedData').textContent);
+let weeks=[{week:1,mode:'cumulative',...initial}],data=initial,selectedWeek=1,viewMode='cumulative';
+let region='All',size='All',sortKey='eng',sortDir=-1,page=0;
+const regions=['Central','South','North'],sizes=['Large','Small'];
+const matches=x=>(region==='All'||x.region===region)&&(size==='All'||x.size===size);
+const groups=()=>regions.flatMap(r=>sizes.filter(z=>(region==='All'||region===r)&&(size==='All'||size===z)).map(z=>[r,z]));
+const sk=x=>x.name.toLowerCase().trim(),uk=x=>(x.name+'|'+x.school).toLowerCase().trim();
+function addWeek(a,b){
+ const ss=new Map(a.schools.map(x=>[sk(x),{...x}])),us=new Map(a.students.map(x=>[uk(x),{...x}]));
+ for(const x of b.schools){
+ const old=ss.get(sk(x));
+ if(!old){ss.set(sk(x),{...x});continue}
+ const qa=old.qa+x.qa,base=x.base||old.base,active=x.active||old.active;
+ ss.set(sk(x),{...old,...x,qa,base,active,eng:base?active/base:x.eng});
+ }
+ for(const x of b.students){const old=us.get(uk(x));us.set(uk(x),old?{...old,...x,questions:old.questions+x.questions,nuggets:old.nuggets+x.nuggets}:{...x})}
+ return {schools:[...ss.values()],students:[...us.values()]};
+}
+function cumulative(w){
+ let result={schools:[],students:[]};
+ for(const x of weeks.filter(x=>x.week<=w).sort((a,b)=>a.week-b.week)){
+ result=x.mode==='incremental'?addWeek(result,x):{schools:x.schools,students:x.students};
+ }
+ return result;
+}
+function weeklyDelta(now,prior){
+ const ss=new Map(prior.schools.map(x=>[sk(x),x])),us=new Map(prior.students.map(x=>[uk(x),x]));
+ return {schools:now.schools.map(x=>({...x,qa:Math.max(0,x.qa-(ss.get(sk(x))?.qa||0))})),
+ students:now.students.map(x=>({...x,questions:Math.max(0,x.questions-(us.get(uk(x))?.questions||0)),nuggets:Math.max(0,x.nuggets-(us.get(uk(x))?.nuggets||0))}))};
+}
+function switchWeek(){
+ const current=weeks.find(x=>x.week===selectedWeek);if(!current)return;
+ const cum=cumulative(selectedWeek),prior=weeks.filter(x=>x.week<selectedWeek).at(-1);
+ data=viewMode==='cumulative'?cum:current.mode==='incremental'?{schools:current.schools,students:current.students}:prior?weeklyDelta(cum,cumulative(prior.week)):cum;
+ $('#weekStatus').textContent=`Week ${selectedWeek} · ${viewMode==='cumulative'?'Cumulative':'This week only'}`;
+ $('#dataLabel').textContent=`Week ${selectedWeek} · Published leaderboard`;
+ page=0;render();
+}
+function cards(rows,school){
+ return groups().map(([r,z])=>{
+ const metric=x=>Number(school?x.eng:x.questions)||0;
+ const top=rows.filter(x=>x.region===r&&x.size===z).sort((a,b)=>metric(b)-metric(a)||a.name.localeCompare(b.name)).slice(0,5);
+ const max=Math.max(1,...top.map(metric));
+ return `<article class="panel"><div class="card-title"><h3>${esc(r)} · ${esc(z)}</h3><span class="tag">TOP 5</span></div>${top.map((x,i)=>`<div class="entry"><span class="rank">${i+1}</span><div style="min-width:0"><div class="name">${esc(x.name)}</div><div class="detail">${school?'Total Q/As: '+fmt(x.qa)+' · Active students: '+fmt(x.active):esc(x.school)}</div><div class="bar"><i style="width:${Math.max(0,Math.min(100,metric(x)/max*100))}%"></i></div></div><div class="question-count"><strong>${school?fmt(x.eng*100)+'%':fmt(x.questions)}</strong><small>${school?'engagement':'questions answered'}</small></div></div>`).join('')||'<div class="empty">No records</div>'}</article>`;
+ }).join('');
+}
+function renderStudents(rows){
+ const q=$('#studentSearch').value.toLowerCase().trim();
+ const list=rows.filter(x=>(x.name+' '+x.school).toLowerCase().includes(q)).sort((a,b)=>b.questions-a.questions||a.name.localeCompare(b.name));
+ const pages=Math.max(1,Math.ceil(list.length/50));page=Math.max(0,Math.min(page,pages-1));
+ $('#studentRows').innerHTML=list.slice(page*50,page*50+50).map((x,i)=>`<tr><td>${fmt(page*50+i+1)}</td><td>${esc(x.name)}</td><td>${esc(x.school)}</td><td>${esc(x.region)}</td><td>${esc(x.size)}</td><td class="num"><strong>${fmt(x.questions)}</strong></td></tr>`).join('')||'<tr><td colspan="6">No students found</td></tr>';
+ $('#studentCount').textContent=fmt(list.length)+' students';
+ $('#studentPageInfo').textContent=`Page ${page+1} of ${pages}`;
+ $('#prevStudents').disabled=page===0;$('#nextStudents').disabled=page>=pages-1;
+}
+function render(){
+ const schools=data.schools.filter(matches),students=data.students.filter(matches);
+ const active=schools.reduce((a,x)=>a+x.active,0),base=schools.reduce((a,x)=>a+x.base,0);
+ const nuggets=students.reduce((a,x)=>a+x.nuggets,0),questions=students.reduce((a,x)=>a+x.questions,0);
+ $('#kpis').innerHTML=[['Schools',fmt(schools.length)],['Nuggets completed',fmt(nuggets)],['Questions answered',fmt(questions)],['Overall engagement',base?fmt(active/base*100)+'%':'—']].map(([label,val])=>`<div class="panel kpi"><div class="label">${label}</div><div class="val">${val}</div></div>`).join('');
+ $$('.category-breakdown').forEach(x=>x.remove());
+ $('#kpis').insertAdjacentHTML('afterend',`<div class="category-breakdown">${(size==='All'?sizes:[size]).map(z=>`<span>${z}: <b>${fmt(students.filter(x=>x.size===z).reduce((a,x)=>a+x.nuggets,0))}</b> nuggets completed</span>`).join('')}</div>`);
+ $('#schoolCards').innerHTML=cards(schools,true);$('#studentCards').innerHTML=cards(students,false);
+ const q=$('#search').value.toLowerCase();
+ $('#rows').innerHTML=schools.filter(x=>(x.name+' '+x.category).toLowerCase().includes(q)).sort((a,b)=>sortDir*((a[sortKey]||0)-(b[sortKey]||0))||a.name.localeCompare(b.name)).map(x=>`<tr><td>${esc(x.name)}</td><td>${esc(x.region)}</td><td>${esc(x.size)}</td><td class="num">${fmt(x.qa)}</td><td class="num">${fmt(x.active)}</td><td class="num">${fmt(x.eng*100)}%</td><td class="num">${fmt(x.score)}</td></tr>`).join('')||'<tr><td colspan="7">No schools found</td></tr>';
+ renderStudents(students);
+ $$('th[data-sort]').forEach(th=>{th.querySelector('.sort-arrow').textContent=th.dataset.sort===sortKey?(sortDir===-1?' ↓':' ↑'):' ↕'});
+}
+$$('[data-region]').forEach(b=>b.addEventListener('click',()=>{region=b.dataset.region;$$('[data-region]').forEach(x=>x.classList.toggle('active',x===b));page=0;render()}));
+$$('[data-size]').forEach(b=>b.addEventListener('click',()=>{size=b.dataset.size;$$('[data-size]').forEach(x=>x.classList.toggle('active',x===b));page=0;render()}));
+$$('th[data-sort]').forEach(th=>{function sort(){let k=th.dataset.sort;sortDir=k===sortKey?-sortDir:-1;sortKey=k;render()}th.addEventListener('click',sort);th.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();sort()}})});
+$('#search').addEventListener('input',render);
+$('#studentSearch').addEventListener('input',()=>{page=0;render()});
+$('#prevStudents').addEventListener('click',()=>{page--;renderStudents(data.students.filter(matches))});
+$('#nextStudents').addEventListener('click',()=>{page++;renderStudents(data.students.filter(matches))});
+$('#weekSelect').addEventListener('change',e=>{selectedWeek=Number(e.target.value);switchWeek()});
+$('#viewMode').addEventListener('change',e=>{viewMode=e.target.value;switchWeek()});
+async function loadWeeks(){
+ try{
+ const resp=await fetch('data/manifest.json',{cache:'no-store'});
+ if(!resp.ok)throw Error('No external data manifest');
+ const manifest=await resp.json();
+ if(!Array.isArray(manifest.weeks)||!manifest.weeks.length)throw Error('No published weeks');
+ const loaded=await Promise.all(manifest.weeks.map(async entry=>{
+ if(!/^week-[1-4]\.json$/.test(entry.file)||Number(entry.week)<1||Number(entry.week)>4)throw Error('Invalid week file');
+ const r=await fetch('data/'+entry.file,{cache:'no-store'});if(!r.ok)throw Error('Missing '+entry.file);
+ const d=await r.json();if(!Array.isArray(d.schools)||!Array.isArray(d.students))throw Error('Invalid data');
+ return {week:Number(entry.week),mode:entry.mode==='incremental'?'incremental':'cumulative',schools:d.schools,students:d.students};
+ }));
+ weeks=loaded.sort((a,b)=>a.week-b.week);
+ }catch(e){$('#weekStatus').textContent='Unable to load data folder: '+e.message;console.error(e);return;}
+ $('#weekSelect').innerHTML=weeks.map(w=>`<option value="${w.week}">Week ${w.week}</option>`).join('');
+ selectedWeek=weeks.at(-1).week;$('#weekSelect').value=selectedWeek;switchWeek();
+}
+loadWeeks();
+const canvas=$('#snow');
+if(canvas&&canvas.getContext&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+ const ctx=canvas.getContext('2d');let flakes=[],w=0,h=0;
+ function resize(){w=canvas.width=innerWidth;h=canvas.height=innerHeight;flakes=Array.from({length:40},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.5+.5,v:Math.random()*.5+.2}))}
+ addEventListener('resize',resize);resize();
+ function animate(){ctx.clearRect(0,0,w,h);ctx.fillStyle='rgba(255,255,255,.6)';for(const f of flakes){ctx.beginPath();ctx.arc(f.x,f.y,f.r,0,Math.PI*2);ctx.fill();f.y+=f.v;if(f.y>h)f.y=0}requestAnimationFrame(animate)}
+ requestAnimationFrame(animate);
+}
+})();
+</script></body></html>
